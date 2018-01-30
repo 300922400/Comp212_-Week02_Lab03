@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Height="26"></Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="190"></ColumnDefinition>
+                <ColumnDefinition Width="290"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <!--row 1-->
+            <Label Content="Name" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="147" RenderTransformOrigin="0.294,-0.284" Height="30"/>
+            <TextBox x:Name="txtName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10" TextWrapping="Wrap" Text="Narendra Pershad" VerticalAlignment="Top" Width="300" TextChanged="TextBox_TextChanged"/>
+            <!--row 2-->
+            <Label Content="Residency" HorizontalAlignment="Left" Margin="10" Grid.Row="1" VerticalAlignment="Top"/>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Left" Height="50" Grid.Row="1" VerticalAlignment="Top" Width="326" Margin="0,0,-35,0">
+                <RadioButton x:Name="rbtnDomestic" Margin="5,5,234,5" IsChecked="True">Domestic</RadioButton>
+                <RadioButton x:Name="rbtnInternational" Margin="5,5,234,5">International</RadioButton>
+            </StackPanel>
+
+
+
+            <!--row 3-->
+            <Label Content="Semester" HorizontalAlignment="Left" Margin="10" Grid.Row="2" VerticalAlignment="Top"/>
+            <ComboBox x:Name="cboSemester" Grid.Column="1" HorizontalAlignment="Left" Margin="10" Grid.Row="2" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged">
+
+            </ComboBox>
+            <!--row 4-->
+            <Label Content="Conurses" HorizontalAlignment="Left" Margin="10" Grid.Row="3" VerticalAlignment="Top"/>
+            <ListBox x:Name="lstCourses" SelectionMode="Multiple" Grid.Column="1" HorizontalAlignment="Left" Height="80" Margin="21,10,0,0" Grid.Row="3" Grid.RowSpan="2" VerticalAlignment="Top" Width="205">
+
+            </ListBox>
+
+            <!--row 5-->
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,0,224,0" Click="ClickClearBtn">Clear</Button>
+            <Button Grid.Row="5" Grid.Column="1" Margin="67,0,-35,0" Click="ClickOkBtn">OK</Button>
+
+
+        </Grid>
+
+    </DockPanel>
+
+
+</Window>
